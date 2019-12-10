@@ -5,12 +5,15 @@ COURSE: MASS 10400: STORY
 """
 import story
 from collections import OrderedDict
-from datetime import datetime as dt
+import textwrap
+import pyttsx
 
 
 def main():
     text = story.text
     full_replace = story.full_replace
+    for x in range(len(full_replace)):
+        full_replace[x] = full_replace[x].strip()
     unique_replace = list(OrderedDict.fromkeys(full_replace))
     print("Welcome Story Class!! Below I will ask a series of questions to help make Tim's story. Shout out answers "
           "as you see fit!")
@@ -21,22 +24,23 @@ def main():
         for item in full_replace:
             if item is term:
                 full_replace[full_replace.index(item)] = temp
-    # TODO write items in alternating order to file text, then full_replace
-    file1 = open("one_run_" + str(dt.now().time()) + ".txt", "w+")
-    count = 0
-    for phrase in text:
-        if "." in phrase:
-            if phrase.startswith('.'):
-                text[count] = '\n' + text[count]
-            elif phrase.endswith('.'):
-                text[count] = text[count]
-        file1.write(text[count])
+    final_text = ""
+    for count in range(len(text)):
+        final_text += text[count]
         if count <= 123:
-            file1.write(full_replace[count])
+            final_text += full_replace[count]
         count += 1
-    # TODO print entire story
-    # TODO speak text file (estimated 4 minutes?)
-    file1.close()
+    wrapper = textwrap.TextWrapper(width=140)
+    word_list = wrapper.fill(text=final_text)
+    to_print = open("one_run.txt", "w+")
+    to_print.write(word_list)
+    print(word_list)
+
+    language = "en"
+    myobj = gTTS(text=final_text,lang=language, slow=False)
+    myobj.save("one_audio.mp3")
+    os.system("mpg321 one_audio.mp3")
+
 
 
 if __name__ == '__main__':
