@@ -6,7 +6,8 @@ COURSE: MASS 10400: STORY
 import story
 from collections import OrderedDict
 import textwrap
-import pyttsx
+from gtts import gTTS
+from mpyg321.mpyg321 import MPyg321Player
 
 
 def main():
@@ -37,10 +38,10 @@ def main():
     print(word_list)
 
     language = "en"
-    myobj = gTTS(text=final_text,lang=language, slow=False)
+    myobj = gTTS(text=final_text, lang=language, slow=False)
     myobj.save("one_audio.mp3")
-    os.system("mpg321 one_audio.mp3")
-
+    player = MPyg321Player()
+    player.play_song("one_audio.mp3")
 
 
 if __name__ == '__main__':
