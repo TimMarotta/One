@@ -52,35 +52,32 @@ text = ['Once upon a time, there was a ', ' named ', ' who lived on a ', '. They
         '. In the end, ', ' got to their ', ' just on time to ', ' ', ' to buy some food for their ',
         '. That night, they made their ', ' a special dinner, filled with love and a little bit of magic. ']
 
-full_replace = ['(living being1)', '(name1) ', '(land type1)', '(relative size1)', '(residence1)', '(land type1)',
-                '(place to work1)', '(land type1)', '(group of people1)', '(name1) ', '(verb 1)', '(time of day 1)',
-                '(routine item)', '(group of people1)', '(plural noun)', '(animal 1)', '(action verb 1)', '(noun 1)',
-                '(animal 2)', '(time of day)', '(verb 2)', '(land type1)', '(verb 3)', '(product)', '(place 1)',
-                '(name1)', '(emotion)', '(past tense objective verb 1)', '(thing to do- noun)',
-                '(plural category of beings)', '(group of people1)', '(group of people1)', '(adjective)',
-                '(weather event 1)', '(amount of light)', '(weather event) ', '(past tense verb)', '(land type1)',
-                '(weather event)', '(name1) ', '(onomatopoeia)', '(name1) ', '(gerund of a weather event)',
-                '(emotive adjective)', '(onomatopoeia)', '(animal 1)', '(name1)', '(article of clothing 1) ',
-                '(article of clothing 2)', '(animal 1)', '(animal 1)', '(name1)', '(animal 1)', '(building piece)',
-                '(name1)', '(animal 1)', '(time of day)', '(later time of day)', '(meal)', '(weather event 1)',
-                '(name1)', '(name1)', '(even later time)', '(name1)', '(past tense verb)', '(verb 4)',
-                '(object of verb 2)', '(preposition)', '(bedroom item 1)', '(directional phrase)', '(object of verb 2)',
-                '(bedroom item 1)', '(residence 1)', '(land type1)', '(name1)', '(land type1)', '(time of day 1)',
-                '(noun 2)', '(noun 3)', '(name1)', '(noun 4)', '(weather event 1)', '(outdoor noun)',
-                '(outdoor plural noun) ', '(name1)', '(body part 1)', '(noise)', '(name1)', '(body part 2)', '(adverb)',
-                '(land type1)', '(name1)', '(vehicle 1)', '(vehicle 1 part)', '(vehicle 1)', '(name1) ',
-                '(place to work1)', '(verb 5)', '(product)', '(name1)', '(article of clothing 3)', '(relative size 2) ',
-                '(color)', '(state of matter)', '(group of people1) ', '(name1) ', '(verb 5) ', '(product) ',
-                '(group of people1)', '(verb 6)', '(time period) ', '(place 1) ', '(name1)', '(body part 2)', '(name1)',
-                '(name1)', '(land type1)', '(vehicle)', '(name1)', '(place to work1)', '(verb 5) ', '(product)',
-                '(group of people1)', '(group of people1)']
+full_replace = ['living_being_1', 'name_1', 'land_type_1', 'relative_size1', 'residence_1', 'land_type_1',
+                'place_to_work_1', 'land_type_1', 'group_of_people_1', 'name_1', 'verb_1', 'time_of_day_1',
+                'routine_item_1', 'group_of_people_1', 'plural_noun_1', 'animal_1', 'action_verb_1', 'noun_1',
+                'animal_2', 'time_of_day_2', 'verb_2', 'land_type_1', 'verb_3', 'product', 'place_1',
+                'name_1', 'emotion_1', 'past_tense_objective_verb_1', 'thing_to _do_noun',
+                'plural_category_of_beings', 'group_of_people_1', 'group_of_people_1', 'adjective',
+                'weather_event_1', 'amount_of_light', 'weather_event_2', 'past_tense_verb_1', 'land_type_1',
+                'weather_event_1', 'name_1', 'onomatopoeia_1', 'name_1', 'gerund_of_a_weather_event',
+                'emotion_2', 'onomatopoeia_2', 'animal_1', 'name_1', 'article_of_clothing_1',
+                'article_of_clothing_2', 'animal_1', 'animal_1', 'name_1', 'animal_1', 'building_piece',
+                'name_1', 'animal_1', 'time_of_day_3', 'later_time_of_day', 'meal', 'weather_event_1',
+                'name_1', 'name_1', 'even_later_time', 'name_1', 'past_tense_verb_2', 'verb_4',
+                'noun_10', 'preposition', 'bedroom_item_1', 'directional_phrase', 'object_of_verb_2',
+                'bedroom_item_1', 'residence_1', 'land_type_1', 'name_1', 'land_type_1', 'time_of_day_1',
+                'noun_2', 'noun_3', 'name_1', 'noun_4', 'weather_event_1', 'outdoor_noun',
+                'outdoor_plural_noun', 'name_1', 'body_part_1', 'noise', 'name_1', 'body_part_2', 'adverb',
+                'land_type_1', 'name_1', 'vehicle_1', 'vehicle_1_part', 'vehicle_1', 'name_1',
+                'place_to_work_1', 'verb_5', 'product', 'name_1', 'article_of_clothing_3', 'relative_size_2',
+                'color', 'state_of_matter', 'group_of_people_1', 'name_1', 'verb_5', 'product',
+                'group_of_people_1', 'verb_6', 'time_period', 'place_1', 'name_1', 'body_part_2', 'name_1',
+                'name_1', 'land_type_1', 'vehicle_1', 'name_1', 'place_to_work_1', 'verb_5', 'product',
+                'group_of_people_1', 'group_of_people_1']
 
 
 def main():
-    # story_parts = to_replace.split("\n")
-    # print(story_parts)
-    print(len(text))
-    print(len(full_replace))
+    print(text[43])
 
 
 if __name__ == '__main__':
